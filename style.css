@@ -2,24 +2,33 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
-header {
-	/*background-image: url("../../pictures/shapes.jpg");*/
+.home_header {
+	background-image: url("allie.JPG");
+	background-repeat: no-repeat;
+	background-position: 0px;
+	background-size: cover;	
+	position: absolute;
 	width: 100%;
-	background-color: #eee;
+	height: 100%;
 	font-family: 'Francois One', sans-serif;
 	font-weight: normal;
-	text-align: left;
-	position: fixed;
-	top: 0;
+	text-align: right;
+	color: white;
+	top:0;
 }
 
-header h1 {
+.home_header h1 {
 	font-size: 4em;
 	margin: 0px;
-	margin-left: 2%;
+	margin-right:13%;
+	margin-top: 1%;
 }	
 
-nav li {
+.home_header nav {
+	margin-right: 8%;
+}
+
+.home_header nav li {
 	display: inline-block;
 	font-family: 'Lato', sans-serif;
 	text-align: center;
@@ -27,16 +36,70 @@ nav li {
 	text-decoration: none;
 	font-size: 1em;
 	margin-top: 0px;
-	padding: 0px;
+	padding-left: 10px;
+
 }
 
-nav a {
+.home_header nav a {
 	font-weight: bold;
+	font-size: 1.1em;
 	padding: 5px 5px;
 	text-decoration: none;
+	color:white;
 }
 
-nav a:hover {
+.home_header nav a:hover {
+	font-weight: normal;
+}
+
+
+.otherheader {
+	background-color:#333;
+	background-repeat: no-repeat;
+	background-position: 0px;
+	background-size: cover;	
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	font-family: 'Francois One', sans-serif;
+	font-weight: normal;
+	text-align: right;
+	color: white;
+	top:0;
+}
+
+.otherheader h1 {
+	font-size: 4em;
+	margin: 0px;
+	margin-right:13%;
+	margin-top: 1%;
+}	
+
+.otherheader nav {
+	margin-right: 8%;
+}
+
+.otherheader nav li {
+	display: inline-block;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	position: relative;
+	text-decoration: none;
+	font-size: 1em;
+	margin-top: 0px;
+	padding-left: 10px;
+
+}
+
+.otherheader nav a {
+	font-weight: bold;
+	font-size: 1.1em;
+	padding: 5px 5px;
+	text-decoration: none;
+	color:white;
+}
+
+.otherheader nav a:hover {
 	font-weight: normal;
 }
 
@@ -105,6 +168,35 @@ footer {
 	text-align: center;
 }
 
+#edu {
+	margin-top: 10%;
+	background-image: url("rotunda.jpg");
+	background-repeat: no-repeat;
+	background-position: 0px;
+	background-size: cover;	
+	padding-bottom:3%;
+}
+
+#edu h2, #edu ul, #edu h3, #edu li {
+	margin-left: 20%;
+	margin-right: 20%;
+	padding-left: auto;
+	padding-right: auto;
+	text-align: middle;
+	float: center;
+	color:white;
+}
+
+#text {
+	background-color: rgba(0,0,0,.4);
+	top: -50px;
+	padding:3%;
+/*	margin-left: 20%;
+	margin-right: 20%;
+	padding-left: auto;
+	padding-right: auto;*/
+
+}
 
 
 
