@@ -1,33 +1,63 @@
-<!doctype html>
 <html>
-<head> 
+<head>
 	<title> Allison Ivener | About</title>
 	<link rel="stylesheet", href="normal.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Exo|Francois+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet", href="style.css">
-</head>	
+	
+	<script type="text/javascript">
+		var theImages = ["sliderimages/IMG_0170.JPG", "sliderimages/IMG_1061.JPG", "sliderimages/IMG_2220.JPG", "sliderimages/IMG_0343.JPG", "sliderimages/IMG_2905.JPG", "sliderimages/IMG_2953.JPG", "sliderimages/IMG_0559.JPG", "sliderimages/IMG_2901.JPG", "sliderimages/IMG_3509.JPG", "sliderimages/IMG_3600.JPG", "sliderimages/IMG_3627.JPG"];
+		var arrIndex = 0;
+		window.onload = slideit;
+		var currImage;
+	</script>
+
+</head>
+<header class="otherheader">
+	<h1 class="header">Allison Ivener</h1>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="clubs.html">Relevant Experiences</a></li>
+			<li><a href="education.html">Education</a></li>
+		</ul>
+	</nav>
+</header>
+
 <body>
-	<header class="otherheader">
-		<h1 class="header">Allison Ivener</h1>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="clubs.html">Relevant Experiences</a></li>
-				<li><a href="education.html">Education</a></li>
-			</ul>
-		</nav>
-	</header>
+
 	<div class="content">
+		<div class="about_wrapper">
+			<div class="textblock">
+				<h1>Family,</h1>
+				<h1>Sports,</h1>
+				<h1>the Outdoors</h1>
+			</div>
+			<img src="sliderimages/IMG_1996.JPG" id="main_img" class="sliders" />
+		</div>
+		<script type="text/javascript">
+			currImage=document.getElementById("main_img");
+			function slideit() {
+				arrIndex++;
+				if (arrIndex < 0 || arrIndex > theImages.length-1)
+				arrIndex = 0;
+				currImage.src = theImages[arrIndex];
+				setTimeout("slideit()", 2500);
+			}
+			slideit();
+		</script>
+
 		<div id="aboutwrap">
-			<h2>Family, Sports, and the Outdoors</h2>
-			<p>I am a third year student at the University of Virginia (no, we don't say junior, or campus...I know it's strange). The past few years at UVA have been amazing. I am involved in various organizations, and even was a part of starting one. I have a great group of friends, all of whom are just as involved at the University and just as academically motivated. I spend most of my time studying or attendign meetings, but I like the structured lifestyle. UVA has been the absolute best school for me, affording me with many opportunities to get involved in the Charlottesville community and meet great and inspiring learners. Wahoowa!</p>
+			<p>I am a third year student at the University of Virginia (no, we don't say junior, or campus...I know it's strange). The past few years at UVA have been amazing. I am involved in various organizations, and I even was a part of starting one. I have a great group of friends, all of whom are just as involved at the University and just as academically motivated. I spend most of my time studying or attending meetings, but I like the structured lifestyle. UVA has been the absolute best school for me, affording me with many opportunities to get involved in the Charlottesville community and meet great and inspiring learners. Wahoowa!</p>
 			<p>One organization at UVA stands out as something a little different. It is the Virginia No Tones, an a capella group for those with the heart of a singer, but without the voice. I joined the No Tones during it's first semester, and it has been the perfect outlet for my singing attempts, as well as a great Monday night study break. As a group, we "sing" various mash-ups and songs that we "arrange". I love bringing together students who, in all other realms of their life, are over-committed, busy, and stressed, just to shout a few off-pitch notes and have a great time. Even though the musically talented groups at UVA have a bit of an issue with our group, we've received a ton of great publicity and had over 70 musically-challenged people audition this past fall.</p>
 			<p>I am incredibly close with my mom, dad, and little brother. Together we have traveled around the world and explored DC. I am lucky to have my grandparents just five minutes from my house, so I spend a lot of time with them as well. Not much is better than a quiet evening spent at home, laughing, watching movies, and chatting with my family.</p> <img src="family.jpg" class="clubimg">
-			<p>Sports are a huge part of my life. Playing soccer took up most of my time growing up, and I started field hockey in high school. I often wish I had tried to play field hockey in college, but I am glad that I have the opportunities to become involved in so many new things at UVA. Since high school, I started rock climbing. The thrill of climbing a seemingly flat rock face is exhilerating. Aside from playing sports, I am a huge Washington Capitals fan. While they aren't the best hockey team in the NHL, I have made great memories with my family and friends attending and watching games throughout my life.</p>
+			<p>Sports are a huge part of my life. Playing soccer took up most of my time growing up, and I started field hockey in high school. I often wish I had tried to play field hockey in college, but I am glad that I have the opportunities to become involved in so many new things at UVA. Since high school, I started rock climbing. The thrill of climbing a seemingly flat rock face is exhilerating and incredibly exhausting. Aside from playing sports, I am a huge Washington Capitals fan. While they aren't the best hockey team in the NHL, I have made great memories with my family and friends attending and watching games throughout my life.</p>
 			<img src="climbing.jpg" class="clubimg">
 		</div>
 	</div>
+
 </body>
+</html>

@@ -126,6 +126,33 @@ a:visited {
 	/*-webkit-column-rule: 4px outset #eeeeee;*/
 }
 
+.about_wrapper {
+	display:table;
+	text-align: center;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.textblock, .sliders {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 3%;
+}
+
+
+.about_wrapper h1 {
+	margin-bottom: 2px;
+	margin-top: 2px;
+	line-height: 1.5;
+}
+
+.sliders {
+	width: 350px;	
+	height: 250px;
+
+}
+
 .left_col {
 	margin-right: 0px;
 	margin-left: 20%;
@@ -138,7 +165,7 @@ a:visited {
 	border-radius: 8px;
 }
 
-.main_text{
+.main_text { 
 	width: 300px;
 	margin-right: 30%;
 	text-align: left;
@@ -164,7 +191,6 @@ a:visited {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	style: inline-block;
 	padding-bottom: 15px;
 }
 
