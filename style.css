@@ -62,6 +62,10 @@ body {
 	box-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
 
+.active {
+	background-color: red;
+}
+
 /*** HOME ***/
 header {
 	height: 700px;
@@ -105,6 +109,16 @@ header, .nav-scrolled {
 	font-size: 2em;
 	font-weight: lighter;
 }
+
+ .home p {
+ 	position: absolute;
+	top: 325px;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	margin-left: 62%;
+	margin-right: 5%;
+	font-weight: 200;
+ }
 
 .content {
 	font-family: 'Raleway', sans-serif;

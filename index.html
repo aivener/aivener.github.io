@@ -13,6 +13,7 @@
 			<img class="home-pic" src="pictures/allie.JPG">
 			<h1>Allison <br> Ivener</h1>
 			<h2>coder | traveler | learner</h2>
+			<p>"In times of change, learners inherit the earth, while the learned find themselves beautifully equipped to deal with a world that no longer exists." - Eric Hoffer</p>
 		</div>
 	</header>
 	<nav class="nav">
@@ -52,7 +53,7 @@
 
 			<div class="experience-blurb">
 				<h2>Women in Computing Sciences at UVA</h2>
-				<p>I am a founding member and the webmaster for <a href="http://www.cs.virginia.edu/~acm-w/">WiCS at UVA</a>, a club focused on encouraging women to join computing majors and disciplines. We hold events at UVA for current students and also for high schoolers in the area to cultivate an interest in technology. I also act as a mentor to a youunger UVA student, which involves meeting with her to help her in class selection, internship hunts, and general college advice.</p>
+				<p>I am a founding member and the webmaster for <a href="wics.cs.virginia.edu">WiCS at UVA</a>, a club focused on encouraging women to join computing majors and disciplines. We hold events at UVA for current students and also for high schoolers in the area to cultivate an interest in technology. I also act as a mentor to a youunger UVA student, which involves meeting with her to help her in class selection, internship hunts, and general college advice.</p>
 				<img src="pictures/WiCSLogo.png" alt="WiCS Logo">
 			</div>
 
@@ -161,35 +162,65 @@
 		
 
 </body>
-<!-- <footer>
-		<p>"In times of change, learners inherit the earth, while the learned find themselves beautifully equipped to deal with a world that no longer exists." - Eric Hoffer</p>
-</footer> -->
+
 <script>
-	var  mn = $(".nav");
-	    mns = "nav-scrolled";
-	    header_height = $('header').height();
+	var  navVar = $(".nav");
+	var newClass = "nav-scrolled";
+	var headerHeight = $('header').height();
+	var experienceHeight = $(".experience-content").height();
+	var academicsHeight = $(".academics-content").height();
+	var lifeHeight = $(".life-content").height();
+
 
 	$(window).scroll(function() {
-	  if( $(this).scrollTop() > header_height ) {
-	    mn.addClass(mns);
-	  } else {
-	    mn.removeClass(mns);
-	  }
+		var topOfWindow = $(window).scrollTop();
+	  	if( $(this).scrollTop() > headerHeight ) {
+	    	navVar.addClass(newClass);
+	  	} else {
+	    	navVar.removeClass(newClass);
+		}
+
+		if( topOfWindow >= experienceHeight && topOfWindow <= academicsHeight ) {
+			$(".experience-nav").addClass("active");
+			$(".academics-nav").removeClass("active");
+			$(".life-nav").removeClass("active");
+		} else if ( topOfWindow >= academicsHeight && topOfWindow <= lifeHeight) {
+			$(".academics-nav").addClass("active");
+			$(".life-nav").removeClass("active");
+			$(".experience-nav").removeClass("active");
+		} else if (topOfWindow >= lifeHeight) {
+			$(".life-nav").addClass("active");
+			$(".academics-nav").removeClass("active");
+			$(".experience-nav").removeClass("active");
+		}
+
 	});
 
 	$(".experience-nav").on("click", function() {
 		$("html, body").animate({
         	scrollTop: $(".experience-content").offset().top-$(".nav").height()},'slow');
+		$(".experience-nav").addClass("active");
+		$(".academics-nav").removeClass("active");
+		$(".life-nav").removeClass("active");
+
 	});
 
 	$(".academics-nav").on("click", function() {
 		$("html, body").animate({
 	    	scrollTop: $(".academics-content").offset().top-$(".nav").height()},'slow');
+		$(".academics-nav").addClass("active");
+		$(".life-nav").removeClass("active");
+		$(".experience-nav").removeClass("active");
+
 	});
 
 	$(".life-nav").on("click", function() {
 		$("html, body").animate({
 	    	scrollTop: $(".life-content").offset().top-$(".nav").height()},'slow');
+		$(".life-nav").addClass("active");
+		$(".academics-nav").removeClass("active");
+		$(".experience-nav").removeClass("active");
+
 	});
 
 </script>
