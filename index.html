@@ -11,9 +11,11 @@
 	<header>
 		<div class="home">
 			<img class="home-pic" src="pictures/allie.JPG">
-			<h1>Allison <br> Ivener</h1>
-			<h2>coder | traveler | learner</h2>
-			<p>"In times of change, learners inherit the earth, while the learned find themselves beautifully equipped to deal with a world that no longer exists." - Eric Hoffer</p>
+			<div class="home-text" style="display:none;">
+				<h1>Allison <br> Ivener</h1>
+				<h2>coder | traveler | learner</h2>
+				<p>"In times of change, learners inherit the earth, while the learned find themselves beautifully equipped to deal with a world that no longer exists." - Eric Hoffer</p>
+			</div>
 		</div>
 	</header>
 	<nav class="nav">
@@ -29,7 +31,7 @@
 			<hr>
 			<div class="experience-blurb">
 				<h2>Microsoft Software Engineer Intern</h2>
-				<p>I worked on the first version of a program onboaring tool as an intern of the Partner Incentives team within MPSIT (Marketing, Products, and Sales IT) at Microsoft. I contributed to frontend and backend design decisions, practiced agile methodology, and worked with a full-time developer to create the first version of this Partner Incentives Program Configuration Tool. My responsibilities included creating the UI for the tool, linking the webAPI and cloud database to the web application, hosted on Azure, and automated testing using Selenium. I taught myself angular.js and engineered the tool using that framework, along with SQL and C#. The estimated business impact of this tool is $2 billion. Working at such a big company provided me many opportunities to learn about current technology trends and try out new things. I even drove a wheelchair just with my eye movement!</p>
+				<p>I worked on the first version of a program onboarding tool as an intern of the Partner Incentives team within MPSIT (Marketing, Products, and Sales IT) at Microsoft. I contributed to frontend and backend design decisions, practiced agile methodology, and worked with a full-time developer to create the first version of this Partner Incentives Program Configuration Tool. My responsibilities included creating the UI for the tool, linking the webAPI and cloud database to the web application, hosted on Azure, and automated testing using Selenium. I taught myself angular.js and engineered the tool using that framework, along with SQL and C#. The estimated business impact of this tool is $2 billion. Working at such a big company provided me many opportunities to learn about current technology trends and try out new things. I even drove a wheelchair just with my eye movement!</p>
 				<img src="pictures/microsoftlogo.png">
 			</div>
 
@@ -164,7 +166,11 @@
 </body>
 
 <script>
-	var  navVar = $(".nav");
+	$(document).ready(function() {
+		$(".home-text").fadeIn(2000);
+	})
+
+	var navVar = $(".nav");
 	var newClass = "nav-scrolled";
 	var headerHeight = $('header').height();
 	var experienceHeight = $(".experience-content").height();
