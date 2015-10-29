@@ -176,6 +176,9 @@
 	var experienceHeight = $(".experience-content").height();
 	var academicsHeight = $(".academics-content").height();
 	var lifeHeight = $(".life-content").height();
+	var experiencePos = $(".experience-content").position().top + $(window).height()/2;
+	var academicsPos = $(".academics-content").position().top + $(window).height()/2;
+	var lifePos = $(".life-content").position().top + $(window).height()/2;
 
 
 	$(window).scroll(function() {
@@ -186,15 +189,17 @@
 	    	navVar.removeClass(newClass);
 		}
 
-		if( topOfWindow >= experienceHeight && topOfWindow <= academicsHeight ) {
+		//($(window).scrollTop() + $(window).height()) 
+
+		if( topOfWindow < academicsPos ) {
 			$(".experience-nav").addClass("active");
 			$(".academics-nav").removeClass("active");
 			$(".life-nav").removeClass("active");
-		} else if ( topOfWindow >= academicsHeight && topOfWindow <= lifeHeight) {
+		} else if ( topOfWindow >= academicsPos && topOfWindow < lifePos) {
 			$(".academics-nav").addClass("active");
 			$(".life-nav").removeClass("active");
 			$(".experience-nav").removeClass("active");
-		} else if (topOfWindow >= lifeHeight) {
+		} else {
 			$(".life-nav").addClass("active");
 			$(".academics-nav").removeClass("active");
 			$(".experience-nav").removeClass("active");
