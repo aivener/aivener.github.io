@@ -1,251 +1,56 @@
-/** PRE SCSS **/
-
-body {
-	margin: 0;
-	padding-top: 50%;
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
-/*** NAV ***/
-.nav ul {
-	top: 0;
-	width: 100%;
-	background-color: white;
-	margin: 0;
-	height: 60px;
+.top {
+    background-image: url("pictures/joshuaTree.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
 
-.nav li {
-	padding: 20px 40px;
-	list-style-type: none;
-	display: inline-block;
-	font-family: 'Gudea', sans-serif;
+.top-text {
+  position: relative;
+  top: 15%;
+  left: 60%;
+  word-wrap: break-word;;
+  width: 350px;
 }
 
-.nav li a {
-	text-decoration: none;
-	color: black;
-	position: relative;
+.top-header {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
 }
 
-.nav li a:hover {
-	color: black;
-	cursor: pointer;
+.sub-header {
+  font-size: 24px;
+  margin: 6px 0;
 }
 
-.nav li a:before{
-	content: "";
-  	position: absolute;
-  	width: 100%;
-  	height: 2px;
-  	top: 0;
-  	left: 0;
-  	background-color: blue;
-  	visibility: hidden;
-  	-webkit-transform: scaleX(0);
-  	transform: scaleX(0);
-  	-webkit-transition: all 0.3s ease-in-out 1s;
-  	transition: all 0.3s ease-in-out 0s;
+.paragraph-text {
+  margin-top: 10px;
+  font-size: 18px;
 }
 
-.nav li a:hover:before {
-  	visibility: visible;
-  	-webkit-transform: scaleX(1);
-  	transform: scaleX(1);
+.social-media {
+  margin: 20px 0;
 }
 
-.nav, .content {
-	position: relative;
+.paragraph-text a img {
+  height: 28px;
+  width: 28px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
-.nav {
-	height: 60px;
-	z-index: 150;
-	margin-bottom: -60px;
-	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+@media only screen and (max-width: 775px) {
+    .top-text  {
+        left: 0%;
+        margin: auto;
+    }
 }
-
-.active {
-	font-size:22px;
-}
-
-/*** HOME ***/
-header {
-	height: 700px;
-}
-
-.home-pic {
-	width: 100%;
-}
-
-header, .nav-scrolled {
-	position: fixed;
-	width: 100%;
-	top: 0;
-}
-
-.content {
-	background-color: white;
-	padding: 110px 50px 50px;
-}
-
-.home {
-	position: relative;
-}
-
-.home h1 {
-	position: absolute;
-	top: 100px;
-	font-family: 'Quicksand', sans-serif;
-	color: white;
-	margin-left: 62%;
-	font-size: 3em;
-	font-weight: 300;
-}
-
-.home h2 {
-	position: absolute;
-	top: 250px;
-	font-family: 'Quicksand', sans-serif;
-	color: white;
-	margin-left: 62%;
-	font-size: 2em;
-	font-weight: lighter;
-}
-
- .home p {
- 	position: absolute;
-	top: 325px;
-	font-family: 'Quicksand', sans-serif;
-	color: white;
-	margin-left: 62%;
-	margin-right: 5%;
-	font-weight: 200;
- }
-
-.content {
-	font-family: 'Raleway', sans-serif;
-	padding: 0;
-}
-
-.section-title {
-	padding-top: 60px;
-	font-family: 'Quicksand', sans-serif;
-}
-
-/*** EXPERIENCE ***/
-.experience-content {
-	margin: auto;
-	padding: 0 70px;
-}
-
-.logos img {
-	height: 80px;
-}
-
-.logos li {
-	padding: 6px 6px;
-	list-style-type: none;
-	display: inline-block;
-}
-
-.experience-blurb {
-	position:relative;
-	padding: 0 70px;
-	text-align: justify;
-}
-
-.experience-blurb img {
-	margin: auto;
-	display: block;
-	max-height: 100px;
-	padding-right: 30px;
-}
-
-/*** ACADEMICS ***/
-.academics-content {
-	margin: auto;
-	padding: 0 70px;
-	min-height: 100px;
-	overflow:hidden;
-}
-
-.courses, .skills, .leadership {
-	padding: 20px 0;
-	margin: 0 1.5%;
-	float: left;
-	width: 30%;
-	text-align: center;
-	border-radius: 5px;
-}
-
-.courses ul, .skills ul, .leadership ul{
-	list-style-type: none;
-	padding: 0;
-}
-
-.courses li, .skills li, .leadership li{
-	padding: 3px;
-}
-
-.courses {
-	background-color: #b4cee5;
-}
-
-.skills {
-	background-color: #4598e0;
-}
-
-.leadership {
-	background-color: #b4cee5;
-}
-
-
-/*** LIFE ***/
-.life-content {
-	margin: auto;
-	padding: 0 70px;
-}
-.thumbnail {
-	position: relative;
-	width: 300px;
-	height: 300px;
-	overflow: hidden;
-	display: inline-block;
-}
-
-.thumbnail img {
-  	position: absolute;
-  	display: block;
-  	margin: auto;
-  	left: 50%;
-  	top: 50%;
-  	height: 100%;
-  	width: auto;
-  	-webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-}
-
-.img-text {
-	background: rgba(0,0,0,0.5);
-  	color: white;
-  	cursor: pointer;
-  	display: table;
-  	height: 100%;
-  	width: 100%;
-  	left: 0;
-  	position: absolute;
-  	top: 0;
-  	opacity: 0;
-}
-
-.img-text span {
-	display: table-cell;
-  	text-align: center;
-  	vertical-align: middle;
-}
-
-.thumbnail:hover .img-text {
-	opacity: 1;
-}
-
