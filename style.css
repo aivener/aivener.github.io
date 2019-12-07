@@ -17,7 +17,7 @@ body, html {
   position: relative;
   top: 15%;
   left: 60%;
-  word-wrap: break-word;;
+  word-wrap: break-word;
   width: 350px;
 }
 
@@ -46,6 +46,14 @@ body, html {
   width: 28px;
   display: inline-block;
   margin-right: 10px;
+}
+
+.icon-credit {
+  font-size: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: gray;
 }
 
 @media only screen and (max-width: 775px) {
